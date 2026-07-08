@@ -44,7 +44,7 @@ window#waybar {
 }
 
 #workspaces button.focused {
-	min-width: 55px;
+	min-width: 45px;
 }
 
 
