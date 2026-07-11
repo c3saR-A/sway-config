@@ -21,7 +21,7 @@ case "$1" in
 		;;
 	area-clipboard)
 		AREA=$(slurp -w 0) || exit 0
-                grim -g "$AREA" -  | wl-copy
+                grim -g "$AREA" - | wl-copy
                 ;;
         window-clipboard)
                 grim -g "$WINDOW" - | wl-copy

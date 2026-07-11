@@ -1,8 +1,0 @@
-show=drun
-prompt=Buscar...
-allow_images=true
-image_size=32
-no_actions=true
-hide_scroll=true
-width=550
-height=350
