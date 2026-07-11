@@ -1,0 +1,315 @@
+// -*- mode: jsonct -*-
+{
+    // "layer": "top", // Waybar at top layer
+    // "position": "bottom", // Waybar position (top|bottom|left|right)
+    "height": 25, // Waybar height (to be removed for auto height)
+    // "width": 1280, // Waybar width
+    
+    "spacing": 2, // Gaps between modules (2px)
+        
+    // Choose the order of the modules
+    "modules-left": [
+	"custom/power",
+        "sway/workspaces",
+	"sway/window",
+        "sway/scratchpad",
+        "sway/mode",
+    ],
+
+    "modules-center": [
+	"mpris",
+        "clock",
+        "network",
+    ],
+
+    "modules-right": [
+	"disk",
+        "memory",
+        "cpu",
+        "temperature",
+        "battery",
+	"group/utilities",
+        "tray",
+    ],
+
+    // Modules configuration
+
+//  ## Left Modules ## //
+    
+    "custom/power": {
+	"justify": "center",
+	"align": 0.5,
+        "format" : "<b>  </b>",
+	//  
+	"tooltip": false,
+	"menu": "on-click",
+	"menu-file": "/usr/share/waybar/custom_modules/power_menu.xml", // Menu file in resources folder
+	"menu-actions": {
+	    "poweroff": "systemctl poweroff",
+	    "reboot": "systemctl reboot",
+	    "suspend": "systemctl suspend",
+	    "hibernate": "systemctl hibernate"
+	},
+    },
+
+    "sway/workspaces": {		
+	"justify": "center",
+	"align": 0.5,
+	"warp-on-scroll": false,
+        "all-outputs": true,
+        "format": "{name}",
+        "persistent-workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+	    "4": [],
+	    "5": [],
+        },
+    },
+
+    "sway/window": {
+	"justify": "center",
+	"align": 0.5,
+        "format": "",
+	"icon": true,
+	"tooltip": false,
+    },
+
+    "sway/mode": {
+	"justify": "center",
+	"align": 0.5,
+        "format": "<span style=\"italic\">{}</span>",
+    },
+
+    "sway/scratchpad": {
+	"justify": "center",
+	"align": 0.5,
+        "format": "{icon} {count}",
+        "show-empty": false,
+        "format-icons": ["", ""],
+        "tooltip": true,
+        "tooltip-format": "{app}: {title}"
+    },
+
+//  ## Center Modules ## //
+
+    "mpris": {
+	"justify": "center",
+	"align": 0.5,
+	"title-len": 4,
+        "format": "{title} {status_icon} {position}",
+        "format-paused": "{title} {status_icon} {position}",
+	"interval": 1,
+	"dynamic-separator": " - ",
+	"dynamic-order": ["title",  "artist", "album"],
+	"tooltip": true,
+	"tooltip-format": "{dynamic}",
+	"tooltip-format": "[Escuchando ahora]\n\n{title} · {length}\n{artist} · {album}",
+        "player-icons": {
+            "default": " 󰖟 ",
+	    "mpv": "  ",
+        },
+        "status-icons": {
+	    "playing": "  ",
+            "paused": "  ",
+	    "stopped": "  ",
+        },
+    },
+
+    "clock": {
+	"justify": "center",
+	"align": 0.5,
+        "timezones": ["", "America/Buenos_Aires", "Europe/Madrid", "Asia/Tokyo"],
+	"format": "{:%H:%M %p}",
+        "format-alt": "<b><span color='#ff5599'>{:%a. %d</span> / <span color='#f5ff66'>%b.</span> / <span color='#ffa442'>%Y</span></b>}",
+	"tooltip": true,
+        "tooltip-format": "<big><b>{:%Y %B}</b></big>\n\n<tt><big>{calendar}</big></tt>",
+	"calendar": {
+            "mode"          : "month",
+	    "mode-mon-col"  : 3,
+            "weeks-pos"     : "left",
+            "on-scroll"     : 1,
+            "format": {
+		"months":     "<span color='#ffead3'><b>{}</b></span>",
+                "days":       "<span color='#ffeadf'><b>{}</b></span>",
+                "weeks":      "<span color='#ffa442'><b>W{}</b></span>",
+                "weekdays":   "<span color='#f5ff66'><b>{}</b></span>",
+                "today":      "<span color='#ff5599'><b><u>{}</u></b></span>"
+            }
+        },
+	"actions": {
+	    "on-click-right": "mode",
+	    "on-click-middle": "tz_up",
+	    "on-scroll-up": "shift_down",
+	    "on-scroll-down": "shift_up"
+        }
+    },
+
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+	"justify": "center",
+	"align": 0.5,
+        "family": "ipv4",
+	"format-wifi": "{essid} {icon}",
+        "format-ethernet": "{ipaddr}/{cidr} ",
+        "format-linked": "{ifname} (No IP) 󱎔",
+        "format-disconnected": "Disconnected",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}",
+        "tooltip-format": "{ifname} via {gwaddr} | {netmask}",	"format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+	// "{bandwidthUpBits} {bandwidthDownBits}: {bandwidthTotalBits}",
+	// "{bandwidthUpBytes} {bandwidthDownBytes}: {bandwidthTotalBytes}",
+    },
+
+//  ## Right Modules ## //
+
+    "disk": {
+	"justify": "center",
+	"align": 0.5,
+        "format": "{percentage_used}% ",
+	"tooltip": true,
+	"tooltip-format": "{used} out of {total} on /",
+	"unit": "GiB",
+    },
+
+    "memory": {
+	"justify": "center",
+	"align": 0.5,
+        "format": "{}% ",
+	"tooltip": true,
+	"tooltip-format": "Mem: {used}GiB / {total}GiB\nSwap: {swapUsed}GiB / {swapTotal}GiB",
+    },
+
+    "cpu": {
+	"justify": "center",
+	"align": 0.5,
+	"interval": 5,
+        "format": "{usage}% ",
+	"format-alt": "{avg_frequency}GHz",
+        "tooltip": true,
+	"states": {
+	    "warning": 70,
+            "critical": 90,
+	},
+    },
+
+    "temperature": {
+        // "thermal-zone": 2,
+        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+	"justify": "center",
+	"align": 0.5,
+        "format": "{temperatureC}°C {icon}",
+	"warning-threshold": "60",
+        "format-warning": "{temperatureC}°C {icon}",
+        "critical-threshold": "70",
+        "format-critical": "{temperatureC}°C {icon}",
+        "format-icons": ["", "", "󰀨", ""],
+	"tooltip": false,
+	// 
+    },
+
+    "battery": {
+	"justify": "center",
+	"align": 0.5,
+        "states": {	    
+            "good": 80,
+	    "warning": 30,
+            "critical": 20,
+        },
+	"interval": 6,
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-icons": ["", "", "", "", ""],
+	"tooltip": true,
+	"tooltip-format": "Time to empty: {time}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+    },
+
+//  ## Config group/utilities ## //
+
+    "group/utilities": {
+	"justify": "center",
+	"align": 0.5,
+	"orientation": "inherit",
+	"drawer": {
+	    "children-class": "hidden", 
+	    "transition-duration": 1500,
+	    "click-to-reveal": true,
+	    "transition-left-to-right": false,
+	},
+	"modules": [
+	    "custom/group",
+	    //"upower",
+	    "idle_inhibitor",
+	    "backlight",
+	    "wireplumber",
+	]
+    },
+
+//  ## Group Module ## //
+
+    "custom/group": {
+	"justify": "center",
+	"align": 0.5,
+	"format" : "  ", 
+	"tooltip": false,
+	//  
+    },
+
+    "upower": {
+	"justify": "center",
+	"align": 0.5,
+	"show-icon": false,
+        "icon-size": 12,
+        "hide-if-empty": true,
+	"format": "󱃲",
+        "tooltip": true,
+        "tooltip-format": ": {percentage}/{time}",
+	"tooltip-spacing": 0,
+	"tooltip-padding": 0,
+    },
+
+    "idle_inhibitor": {
+	"justify": "center",
+	"align": 0.5,
+	"tooltip": false,
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": "",
+        },
+    }, 
+
+    "backlight": {
+	// "device": "acpi_video1",
+	"justify": "center",
+	"align": 0.5,
+	"tooltip": true,
+	"tooltip-format":"{percent}% {icon} ",
+        "format": "{icon}",
+        "format-icons": ["", "", "", "", "", "", "", "", ""],
+	"scroll-step": 5.0,
+ },
+
+    "wireplumber": {
+	"justify": "center",
+	"align": 0.5,
+	"tooltip": true,
+	"tooltip-format":"{volume}% {icon} ",
+	"format": "{icon}",
+	"format-muted": "",
+        "format-icons": ["󰕿", "󰖀", "󰕾",""],
+	"scroll-step": 5.0,
+        "on-click-right": "helvum",
+	"on-click": "pavucontrol",
+    },
+
+    "tray": {
+	"justify": "center",
+	"align": 0.5,
+        "icon-size": 12,
+        "spacing": 10
+    },
+
+}

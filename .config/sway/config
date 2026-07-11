@@ -1,0 +1,39 @@
+#    .--.            .--.
+#   ( (`\\."--``--".//`) )
+#    '-.   __   __    .-'
+#     /   /__\ /__\   \
+#    |    \ 0/ \ 0/    |
+#    \     `/   \`     /
+#     `-.  /-"""-\  .-`
+#       /  '.___.'  \
+#       \     I     /
+#        `;--'`'--;`
+#  jgs     '.___.'
+#
+
+# Default config for sway
+# Copy this to ~/.config/sway/config and edit it to your liking.
+# Read `man 5 sway` for a complete reference.
+
+#include /etc/sway/config-vars.d/*
+
+### Imports ###
+
+include ~/.config/sway/config.d/*
+
+### Config Style windows ###
+
+# Removiendo bordes superior de ventanas
+default_border pixel 2
+default_floating_border pixel 2
+
+# Aplicando gaps de ventanas
+gaps inner 2
+gaps outer 2
+
+# Color de los bordes de ventanas 
+# Los primeros 3 no son usados al remover bordes 
+# border|background|text|indicator|child-border
+client.focused #d50032 #454545 #ffffff #00d5a3 #d50032
+client.unfocused #d50032 #454545 #ffffff #00d5a3 #454545
+
