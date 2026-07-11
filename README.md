@@ -82,21 +82,13 @@ This is a personal project, and I hope if anyone reads this, it will be useful a
 
 ## To Do
 
-- [x] Config sway
-- [x] Config swayidle
-- [x] Config waybar
-- [x] Config wofi
-- [x] Config grim + slurp to take screenshots
-- [x] file viewer
-- [x] image viewer
-- [x] videos viewer
+- [ ] Update keybind table
 - [ ] Config greeetd & gtkgreet
 - [ ] Config gtklock
 - [ ] Config change background with wofi + swaybg
 - [ ] Config history with cliphist + wofi
 - [ ] Install some notification daemon
-- [X] Make components table
-- [x] Make keybinding table
+- [ ] Explain `nl` command, use and relation with nwg-display and 30-outputs.conf
 
 ## Soon or Later
 I have many things to add and do like improving and add the missings things in this repo, also in mi systems I have a greeter and lock screen, but it doesn't have a style just default and more missings tools, but step-by-step I will keep going, **see you soon.**
