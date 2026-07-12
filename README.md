@@ -1,4 +1,5 @@
 # *sway-config*
+
 Config files for Sway a tiling Wayland compositor & Niri a scrollable tiling Wayland compositor.
 
 ### Why I Do This
@@ -56,13 +57,13 @@ This is a personal project, and I hope if anyone reads this, it will be useful a
 | `Super + e` | Launch file manager |
 | `Super + Shift + r` | Reload Sway config |
 | `Super + Shift + w` | Reload waybar |
-| `Super + Shift + e` | Exit Sway |
+| `Super + Shift + q` | Exit Sway |
 | `Super + h/j/k/l` or `Super + arrows` | Move the focus in windows |
-| `Super + Shift + h/j/k/l` o `Super + Shift + arrows` | Move the focus windows |
+| `Super + Shift + h/j/k/l` or `Super + Shift + arrows` | Move the focus windows |
 | `Super + 1-9/0` | Switch to workspace 1-10 |
 | `Super + Shift + 1-9/0` | Move focus windows to workspace 1-10 |
-| `Super + b` | Split horizontal |
-| `Super + v` | Split vertial |
+| `Super + b` | Split vertical |
+| `Super + v` | Split horizontal |
 | `Super + w` | Toggle split |
 | `Super + f` | Fullscreen |
 | `Super + Shift + space` | Floating toggle |
@@ -79,10 +80,9 @@ This is a personal project, and I hope if anyone reads this, it will be useful a
 | `Ctrl + Alt + Print` | Take screenshot of focus window and copy to clipboard |
 | `Super + Shift + s` | Open Swappy with the screenshot on the clipboard |
 
-
 ## To Do
 
-- [ ] Update keybind table
+- [x] Update keybind table
 - [ ] Config greeetd & gtkgreet
 - [ ] Config gtklock
 - [ ] Config change background with wofi + swaybg
@@ -91,6 +91,7 @@ This is a personal project, and I hope if anyone reads this, it will be useful a
 - [ ] Explain `nl` command, use and relation with nwg-display and 30-outputs.conf
 
 ## Soon or Later
+
 I have many things to add and do like improving and add the missings things in this repo, also in mi systems I have a greeter and lock screen, but it doesn't have a style just default and more missings tools, but step-by-step I will keep going, **see you soon.**
 
 ### Thanks To
