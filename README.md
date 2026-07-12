@@ -1,5 +1,5 @@
 # *sway-config*
-Config files for Sway the tiling Wayland compositor
+Config files for Sway a tiling Wayland compositor & Niri a scrollable tiling Wayland compositor.
 
 ### Why I Do This
 
