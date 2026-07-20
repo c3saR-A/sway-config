@@ -1,4 +1,4 @@
-# *sway-config*
+# *WMs-config*
 
 Config files for Sway a tiling Wayland compositor & Niri a scrollable tiling Wayland compositor.
 
@@ -24,6 +24,7 @@ This is a personal project, and I hope if anyone reads this, it will be useful a
 | `swaybg` | Wallpaper/Background |
 | `waybar` | Customizable Wayland bar |
 | `greetd` | Login manager daemon |
+| `cage` | A Wayland kiosk compositor use to start gtkgreeter |
 | `gtkgreeter` | A gtk based greeter for greetd |
 | `gtklock` | Lock screen |
 | `wofi` | Launcher / more function coming soon |
@@ -83,10 +84,12 @@ This is a personal project, and I hope if anyone reads this, it will be useful a
 ## To Do
 
 - [x] Update keybind table
-- [ ] Config greeetd & gtkgreet
+- [x] Config greeetd & gtkgreet
+- [ ] Add 'usr/share/xdg-.../* files
 - [ ] Config gtklock
-- [ ] Config change background with wofi + swaybg
-- [ ] Config history with cliphist + wofi
+- [ ] Consider to compile and use corrupter with gtklock
+- [ ] Config something to change background with wofi + swaybg
+- [ ] Config somethin to have a history with cliphist + wofi
 - [ ] Install some notification daemon
 - [ ] Explain `nl` command, use and relation with nwg-display and 30-outputs.conf
 
