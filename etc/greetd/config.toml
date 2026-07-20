@@ -1,0 +1,21 @@
+# The VT to run the greeter on. 
+# Can be "next", "current" or a number
+# designating the VT.
+# VT -> Virtual Terminal | tty7
+[terminal]
+vt = 7
+
+# The default session, also known as the greeter.
+# `agreety` is the bundled agetty/login-lookalike.
+# You can replace `/bin/sh`
+# with whatever you want started, such as `sway`.
+# command = "/usr/sbin/agreety --cmd '${SHELL:-/bin/sh}'"
+# if using wlgreet
+[default_session]
+command = "cage -s -- gtkgreet -l -s /etc/greetd/style.css"
+
+# The user to run the command as.
+# The privileges this user must have depends on the greeter.
+# A graphical greeter may for example require the user to be
+# in the `video` group.
+user = "_greetd"

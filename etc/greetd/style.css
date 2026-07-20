@@ -1,0 +1,90 @@
+/*
+You can type here any CSS rule recognized by GTK+.
+You can temporarily disable this custom CSS by clicking on the “Pause” button above.
+
+Changes are applied instantly and globally, for the whole application.
+*/
+
+* {
+        font-family: JetBrainsMono Nerd Font;
+        font-size: 14px;
+        color: white;
+        border: none;
+        border-radius: 12px;
+        box-shadow: none;
+        text-shadow: none;
+        background-image: none;
+}
+
+window{
+        background-image: url("file:///etc/greetd/backgrounds/Black-Reaper-Shadows_1920x1080.png");
+        background-size: cover;
+        background-position: center;
+}
+
+#window {
+	padding-bottom: 115px;
+}
+
+#clock{
+        font-weight: 100;
+	margin-bottom: 100px;
+}
+
+#body{
+	min-height:125px
+}
+
+#input-field{
+        border: 1px red solid;
+        background-color: transparent;
+}
+
+#command-selector entry{
+        box-shadow: none;
+        background-image: none;
+        background-color: transparent;
+}
+
+#command-selector button {
+	margin: 0
+        border: none;
+        box-shadow: none;
+        background-image: none;
+        background-color: transparent;
+}
+
+menu,
+menuitem{
+	margin: 0
+        border: none;
+        box-shadow: none;
+        background-image: none;
+        background-color: transparent;
+}
+
+button{
+        box-shadow: none;
+        background-image: none;
+        border: 1px solid transparent;
+        background-color: transparent;
+        transition: all 0.5s steps(48);
+}
+
+button:hover {
+        border: 1px solid red;
+}
+
+#body box,
+#body label{
+}
+
+#command-selector,
+#command-selector box,
+#command-selector arrow{
+}
+
+combobox,
+combobox window,
+combobox popover{
+}
