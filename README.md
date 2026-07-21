@@ -87,6 +87,7 @@ This is a personal project, and I hope if anyone reads this, it will be useful a
 - [x] Config greeetd & gtkgreet
 - [ ] Add 'usr/share/xdg-.../* files
 - [ ] Config gtklock
+- [ ] Create a 30-outputs.conf.bak file example
 - [ ] Consider to compile and use corrupter with gtklock
 - [ ] Config something to change background with wofi + swaybg
 - [ ] Config somethin to have a history with cliphist + wofi
