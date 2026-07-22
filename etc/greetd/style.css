@@ -5,47 +5,53 @@ You can temporarily disable this custom CSS by clicking on the “Pause” butto
 Changes are applied instantly and globally, for the whole application.
 */
 
-* {
+* {	
+	font-size: 14px;
+	font-style: italic;
         font-family: JetBrainsMono Nerd Font;
-        font-size: 14px;
         color: white;
-        border: none;
+	border: none;
         border-radius: 12px;
         box-shadow: none;
         text-shadow: none;
-        background-image: none;
+        background-image: none;	
 }
 
 window{
-	background-image: url("file:///etc/greetd/backgrounds/Black-Reaper-Shadows_1920x1080.png");
-        background-size: cover;
+	border-radius: 0;
+        background-image: url("file:///etc/greetd/backgrounds/Black-Reaper-Shadows_1920x1080.png");
+        background-size: auto;
         background-position: center;
 }
 
 #window {
-	padding-bottom: 115px;
+        padding-bottom: 12em;
 }
 
 #clock{
-        font-weight: 100;
-	margin-bottom: 100px;
+        font-weight: lighter;
+	color: #a40000;
+	min-height:5em;
+        margin-bottom: 10.5em;
 }
 
 #body{
-	min-height:125px
+        min-height: 10em;	
 }
 
 #input-field{
-        border: 1px red solid;
+        border: 1px solid #a40000;
         background-color: transparent;
 }
 
 #command-selector entry,
 #command-selector button{
 	margin: 0;
-        border: none;
+	color: #a40000;
+	font-weight: bold;
+	border: none;
         box-shadow: none;
-	text-shadow: none;
+        text-shadow: none;
         background-image: none;
         background-color: transparent;
 }
@@ -55,18 +61,22 @@ menuitem,
 combobox,
 combobox window,
 combobox popover{
-	margin: 0;
+        margin: 0;
         border: none;
         box-shadow: none;
-	text-shadow: none;
+        text-shadow: none;
         background-image: none;
         background-color: transparent;
-        transition: all 0.5s steps(48);
 }
 
-button{
+cellview{
+        font-weight: bolder;
+        color: #3af1f8;
+}
+
+button{	
         box-shadow: none;
-	text-shadow: none;
+        text-shadow: none;
         background-image: none;
         border: 1px solid transparent;
         background-color: transparent;
@@ -74,15 +84,12 @@ button{
 }
 
 button:hover {
-        border: 1px solid red;
+        border: 1px solid #a40000; 
 }
 
 #body box,
-#body label{
-}
-
+#body label,
 #command-selector,
 #command-selector box,
-#command-selector arrow{
+#command-selector arrow{	
 }
-
