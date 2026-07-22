@@ -9,6 +9,7 @@ I started with Ubuntu 25.10 on a Desktop PC, then on a laptop from 2015-2016 wit
 Since then, I have learned and understood many things, and I wanted to try a Wayland Window Managers (WM) like:
 - `Sway`
 - `Niri`
+- `SwayFX`
 - `MangoWC`
 - `Hyprland`
 - More...
@@ -83,15 +84,15 @@ This is a personal project, and I hope if anyone reads this, it will be useful a
 
 ## To Do
 
-- [X] Add 'usr/share/xdg-.../* files
 - [ ] Config gtklock
-- [ ] Create a 30-outputs.conf.bak file example
+- [ ] Create a 30-outputs.conf.bak file as example
 - [ ] Consider to compile and use corrupter with gtklock
-- [ ] Config something to change background with wofi + swaybg
-- [ ] Config somethin to have a history with cliphist + wofi
+- [ ] Check some logout menus or add funcionality with wofi to use as a logout menu
+- [ ] Config something to change background with wofi + swaybg and be more automatic 
+- [ ] Config something to have a history with cliphist + wofi
 - [ ] Install some notification daemon
 - [ ] Explain `nl` command, use and relation with nwg-display and 30-outputs.conf
-- [ ] Consider to add extra sections in the repo like 'What I learnt/Why I did this or use this/What's new' 
+- [ ] Consider to add extra sections in the repo like 'What I learnt / Why I did this or use this / What's new' 
 
 ## Soon or Later
 
