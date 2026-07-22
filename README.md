@@ -83,15 +83,14 @@ This is a personal project, and I hope if anyone reads this, it will be useful a
 
 ## To Do
 
-- [x] Update keybind table
-- [x] Config greeetd & gtkgreet
-- [ ] Add 'usr/share/xdg-.../* files
+- [X] Add 'usr/share/xdg-.../* files
 - [ ] Config gtklock
 - [ ] Consider to compile and use corrupter with gtklock
 - [ ] Config something to change background with wofi + swaybg
 - [ ] Config somethin to have a history with cliphist + wofi
 - [ ] Install some notification daemon
 - [ ] Explain `nl` command, use and relation with nwg-display and 30-outputs.conf
+- [ ] Consider to add extra sections in the repo like 'What I learnt/Why I did this or use this/What's new' 
 
 ## Soon or Later
 
